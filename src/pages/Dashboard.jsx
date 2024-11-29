@@ -12,15 +12,20 @@ import {
   FaCommentDots,
   FaCloudUploadAlt,
 } from "react-icons/fa";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [sessions, setSessions] = useState([]);
   const location = useLocation();
+  const navigate = useNavigate();
 
-  // Function to add a new session
+  // Function to add a new session with details
   const handleCreateSession = () => {
-    const newSession = `Session ${sessions.length + 1} conducted`;
+    const newSession = {
+      name: `Session ${sessions.length + 1}`,
+      date: new Date().toLocaleString(),
+      status: "Conducted",
+    };
     setSessions([...sessions, newSession]);
   };
 
@@ -85,7 +90,7 @@ const Dashboard = () => {
             {/* Metrics */}
             <div className="grid grid-cols-3 gap-4">
               <div className="bg-white shadow rounded p-4 text-center">
-                <div className="text-2xl font-bold">0</div>
+                <div className="text-2xl font-bold">{sessions.length}</div>
                 <div className="text-gray-600">Total Sessions</div>
               </div>
               <div className="bg-white shadow rounded p-4 text-center">
@@ -107,8 +112,10 @@ const Dashboard = () => {
                     key={index}
                     className="flex justify-between py-2 border-b last:border-b-0"
                   >
-                    <span>{session}</span>
-                    <span className="text-teal-600 cursor-pointer">Details</span>
+                    <span>{session.name}</span>
+                    <span className="text-sm text-gray-500">
+                      {session.date} - {session.status}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -117,17 +124,20 @@ const Dashboard = () => {
             {/* Quick Actions */}
             <div className="mt-6 bg-white shadow rounded p-4">
               <h2 className="text-xl font-bold mb-4">Quick Actions</h2>
-              <div className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <button
-                  className="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-600 text-white rounded py-3"
+                  className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white rounded py-3"
                   onClick={handleCreateSession}
                 >
                   <FaPlus /> Create New Session
                 </button>
-                <button className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white rounded py-3">
+                <button className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white rounded py-3">
                   <FaCommentDots /> View Feedback
                 </button>
-                <button className="flex items-center justify-center gap-2 w-full bg-blue-500 hover:bg-blue-600 text-white rounded py-3">
+                <button
+                  className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white rounded py-3"
+                  onClick={() => navigate("/upload")}
+                >
                   <FaCloudUploadAlt /> Upload Media
                 </button>
               </div>
@@ -141,4 +151,3 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
-a
