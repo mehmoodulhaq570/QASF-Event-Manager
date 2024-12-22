@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# QASF Event Manager 🎉
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**QASF Event Manager** is a modern ReactJS dashboard application built for managing various event-related functionalities such as sessions, participants, reminders, social media uploads, and more. It leverages **ReactJS** for building a dynamic and interactive user interface, while **Tailwind CSS** provides utility-first styling for a clean and responsive layout. The app uses **React Router** for seamless navigation and **React Icons** for visually appealing and intuitive icons. 
 
-## Available Scripts
 
-In the project directory, you can run:
 
-### `npm start`
+https://github.com/user-attachments/assets/b1869522-358f-4209-b08b-41a5e59078f8
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Key Features** 🌟
 
-### `npm run build`
+### 1. **Sidebar Navigation** 🧭
+- **Design**: 
+  - A gradient sidebar with a teal color scheme.
+  - Icons from **react-icons** for smooth navigation.
+  - A circular calendar icon with a blue border enhances the sidebar’s visual appeal.
+  - Titles and routes for quick access to various sections.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Routes Included**:
+  - Dashboard (home page) 🏠
+  - Participant Management 🧑‍🤝‍🧑
+  - Session Management 📅
+  - Social Media Upload 📸
+  - Reminder Management ⏰
+  - Profile Management 👤
+  - User Permission Management 🔐
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 2. **Main Content Area** 📊
+The main content area dynamically displays information based on the active route:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Dashboard Route (Home)**:
+  - **Metrics Section**: Displays three widgets with details about:
+    - Total Sessions 📈
+    - Total Participants 👥
+    - Feedback Collected 📝
+  - **Recent Activities Section**: Shows the most recently conducted sessions with a "Details" button for each.
+  - **Quick Actions Section**: Includes three interactive buttons:
+    - **Create New Session** ➕: Adds a new session to the recent activities list.
+    - **View Feedback** 👀: Placeholder for viewing feedback data.
+    - **Upload Media** 📤: Redirects to the Social Media Management page.
 
-### `npm run eject`
+- **Other Routes**: Dynamically renders content for routes like Participant Management, Session Management, etc.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. **Core Functionalities** 🔧
+- **Adding Sessions**: 
+  - The "Create New Session" button dynamically generates a new session and adds it to the recent activities list. 📝
+  - Each session is labeled as "Session X conducted," where X is the session number.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Social Media Management**: 
+  - Clicking **Upload Media** redirects to the Social Media Management page. 📱
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Dynamic Styling**: 
+  - Buttons are well-aligned using **Flexbox** and **Grid** layouts for a clean and responsive design. 💡
+  - Buttons change color subtly on hover to enhance interactivity. 🎨
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## **Future Enhancements** 🚀
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Interactive Feedback**: Implement a modal or new page to view and manage feedback data. 💬
+- **Session Details**: Clicking "Details" on a session could redirect to a detailed session management page. 📑
+- **Dynamic Metrics**: Integrate backend APIs to fetch real-time data for metrics like total sessions and participants. 🔄
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+**QASF Event Manager** provides a streamlined and modern solution for managing event operations, offering easy navigation and a responsive design. It leverages modern web development practices and will continue to evolve with new features and improvements. 🌍✨
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
